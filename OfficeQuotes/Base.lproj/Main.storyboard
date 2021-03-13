@@ -25,11 +25,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PL3-UM-Wn7">
-                                <rect key="frame" x="8" y="164.33333333333334" width="374" height="304.66666666666663"/>
-                                <string key="text">"Last year, Creed asked me how to set up a blog. Wanting to protect the world from being exposed to Creed's brain, I opened up a Word document on his computer and put an address at the top. I've read some of it. Even for the Internet, it's... pretty shocking."</string>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="&quot;And I knew exactly what to do. But in a much more real sense, I had no idea what to do.&quot;" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PL3-UM-Wn7">
+                                <rect key="frame" x="8" y="169.33333333333334" width="374" height="85.333333333333343"/>
+                                <color key="backgroundColor" white="1" alpha="0.74545995447019864" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6Y-Tp-muq">
@@ -40,18 +40,20 @@
                                     <action selector="getRandomQuote:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l2m-V0-Bcf"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bph-Nq-E4A">
-                                <rect key="frame" x="20" y="516.33333333333337" width="350" height="186.66666666666663"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Bph-Nq-E4A" secondAttribute="height" multiplier="15:8" id="FdT-7O-SL1"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-Ryan Howard" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZU-cK-kAR">
-                                <rect key="frame" x="20" y="477" width="350" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-Michael Scott" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZU-cK-kAR">
+                                <rect key="frame" x="20" y="262.66666666666669" width="350" height="19.666666666666686"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bph-Nq-E4A">
+                                <rect key="frame" x="210" y="290.33333333333331" width="160" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Bph-Nq-E4A" secondAttribute="height" multiplier="16:19" id="E5F-Cd-uVA"/>
+                                    <constraint firstAttribute="width" constant="160" id="WiY-6r-jO0"/>
+                                    <constraint firstAttribute="height" constant="190" id="f9M-9P-ZOw"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -63,18 +65,17 @@
                             <constraint firstItem="PL3-UM-Wn7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="9q2-PK-v6D"/>
                             <constraint firstItem="Q6Y-Tp-muq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="AKV-WV-sEV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q6Y-Tp-muq" secondAttribute="trailing" constant="20" id="I7n-RP-PgS"/>
-                            <constraint firstItem="Q6Y-Tp-muq" firstAttribute="top" secondItem="Bph-Nq-E4A" secondAttribute="bottom" constant="20" id="PPq-hF-1RM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bph-Nq-E4A" secondAttribute="trailing" constant="20" id="RcW-5Q-VRg"/>
                             <constraint firstItem="RGv-Zq-mry" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="S19-7w-a30"/>
                             <constraint firstItem="VZU-cK-kAR" firstAttribute="top" secondItem="PL3-UM-Wn7" secondAttribute="bottom" constant="8" id="SL9-ik-6Iq"/>
+                            <constraint firstItem="Bph-Nq-E4A" firstAttribute="top" secondItem="VZU-cK-kAR" secondAttribute="bottom" constant="8" id="TLU-mI-Xeu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bwi-yd-TmA" secondAttribute="trailing" id="Yf0-SW-5qa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bph-Nq-E4A" secondAttribute="trailing" constant="20" id="Z5t-ZT-evD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RGv-Zq-mry" secondAttribute="trailing" constant="20" id="cCZ-oy-inV"/>
-                            <constraint firstItem="PL3-UM-Wn7" firstAttribute="top" secondItem="RGv-Zq-mry" secondAttribute="bottom" constant="70" id="gkh-PH-OXE"/>
+                            <constraint firstItem="PL3-UM-Wn7" firstAttribute="top" secondItem="RGv-Zq-mry" secondAttribute="bottom" constant="75" id="gkh-PH-OXE"/>
                             <constraint firstItem="bwi-yd-TmA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hTM-bu-acx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bwi-yd-TmA" secondAttribute="bottom" id="n1c-ZN-V8O"/>
                             <constraint firstItem="RGv-Zq-mry" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="o2Z-eX-Fih"/>
                             <constraint firstItem="bwi-yd-TmA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rhS-6R-lSU"/>
-                            <constraint firstItem="Bph-Nq-E4A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="uNI-XS-jJJ"/>
                         </constraints>
                     </view>
                     <connections>

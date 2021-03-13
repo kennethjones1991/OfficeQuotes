@@ -14,7 +14,7 @@ class QuoteController {
     
     private let baseURL = URL(string: "https://officeapi.dev/api/quotes/random")!
     
-    func fetchQuote(searchTerm: String, completion: @escaping (Result<Quote, NetworkError>) -> Void) {
+    func fetchQuote(completion: @escaping (Result<Quote, NetworkError>) -> Void) {
         var request = URLRequest(url: baseURL)
         request.httpMethod = "GET"
         
