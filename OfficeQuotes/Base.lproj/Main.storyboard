@@ -1,24 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OfficeQuotes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notepad" translatesAutoresizingMaskIntoConstraints="NO" id="bwi-yd-TmA">
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="office quotes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGv-Zq-mry">
+                                <rect key="frame" x="20" y="56" width="350" height="38.333333333333343"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PL3-UM-Wn7">
+                                <rect key="frame" x="8" y="164.33333333333334" width="374" height="304.66666666666663"/>
+                                <string key="text">"Last year, Creed asked me how to set up a blog. Wanting to protect the world from being exposed to Creed's brain, I opened up a Word document on his computer and put an address at the top. I've read some of it. Even for the Internet, it's... pretty shocking."</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6Y-Tp-muq">
+                                <rect key="frame" x="20" y="723" width="350" height="32"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                <state key="normal" title="Get Random Quote"/>
+                                <connections>
+                                    <action selector="getRandomQuote:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l2m-V0-Bcf"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bph-Nq-E4A">
+                                <rect key="frame" x="20" y="516.33333333333337" width="350" height="186.66666666666663"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Bph-Nq-E4A" secondAttribute="height" multiplier="15:8" id="FdT-7O-SL1"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-Ryan Howard" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZU-cK-kAR">
+                                <rect key="frame" x="20" y="477" width="350" height="20"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VZU-cK-kAR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2vp-oP-SSZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PL3-UM-Wn7" secondAttribute="trailing" constant="8" id="2wS-pk-Ehx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VZU-cK-kAR" secondAttribute="trailing" constant="20" id="5Zd-M1-M5X"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Q6Y-Tp-muq" secondAttribute="bottom" constant="55" id="8JJ-Uv-APf"/>
+                            <constraint firstItem="PL3-UM-Wn7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="9q2-PK-v6D"/>
+                            <constraint firstItem="Q6Y-Tp-muq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="AKV-WV-sEV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q6Y-Tp-muq" secondAttribute="trailing" constant="20" id="I7n-RP-PgS"/>
+                            <constraint firstItem="Q6Y-Tp-muq" firstAttribute="top" secondItem="Bph-Nq-E4A" secondAttribute="bottom" constant="20" id="PPq-hF-1RM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bph-Nq-E4A" secondAttribute="trailing" constant="20" id="RcW-5Q-VRg"/>
+                            <constraint firstItem="RGv-Zq-mry" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="S19-7w-a30"/>
+                            <constraint firstItem="VZU-cK-kAR" firstAttribute="top" secondItem="PL3-UM-Wn7" secondAttribute="bottom" constant="8" id="SL9-ik-6Iq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bwi-yd-TmA" secondAttribute="trailing" id="Yf0-SW-5qa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RGv-Zq-mry" secondAttribute="trailing" constant="20" id="cCZ-oy-inV"/>
+                            <constraint firstItem="PL3-UM-Wn7" firstAttribute="top" secondItem="RGv-Zq-mry" secondAttribute="bottom" constant="70" id="gkh-PH-OXE"/>
+                            <constraint firstItem="bwi-yd-TmA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hTM-bu-acx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bwi-yd-TmA" secondAttribute="bottom" id="n1c-ZN-V8O"/>
+                            <constraint firstItem="RGv-Zq-mry" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="o2Z-eX-Fih"/>
+                            <constraint firstItem="bwi-yd-TmA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rhS-6R-lSU"/>
+                            <constraint firstItem="Bph-Nq-E4A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="uNI-XS-jJJ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="characterImageView" destination="Bph-Nq-E4A" id="CoB-NC-y0P"/>
+                        <outlet property="characterLabel" destination="VZU-cK-kAR" id="uzH-yn-8eA"/>
+                        <outlet property="getQuoteButton" destination="Q6Y-Tp-muq" id="d2f-0M-IGo"/>
+                        <outlet property="quoteTextView" destination="PL3-UM-Wn7" id="zIn-jt-DIF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138.46153846153845" y="123.69668246445497"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="notepad" width="1370" height="1920"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
