@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  QuoteViewController.swift
 //  OfficeQuotes
 //
 //  Created by Kenneth Jones on 3/13/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class QuoteViewController: UIViewController {
     
     @IBOutlet weak var quoteTextView: UITextView!
     @IBOutlet weak var characterLabel: UILabel!

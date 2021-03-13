@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="if8-rq-ZYh">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -8,32 +8,114 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Episode-->
+        <scene sceneID="1Ys-AO-m92">
+            <objects>
+                <viewController id="TgK-ZT-NfH" customClass="EpisodeViewController" customModule="OfficeQuotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BMM-DC-ww5">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notepad" translatesAutoresizingMaskIntoConstraints="NO" id="KYO-bu-3WJ">
+                                <rect key="frame" x="0.0" y="44" width="390" height="717"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vIC-MD-acP">
+                                <rect key="frame" x="20" y="679" width="350" height="32"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                <state key="normal" title="Get Random Episode"/>
+                                <connections>
+                                    <action selector="getRandomEpisode:" destination="TgK-ZT-NfH" eventType="touchUpInside" id="pzL-S3-J8h"/>
+                                    <action selector="getRandomQuote:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uBD-hi-b6X"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pilot" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Mx-2f-Wkd">
+                                <rect key="frame" x="20" y="105" width="350" height="28"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="office episodes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFS-F9-YUU">
+                                <rect key="frame" x="20" y="54" width="350" height="39"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Episode description" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqA-KW-ppW">
+                                <rect key="frame" x="8" y="163" width="374" height="39.333333333333343"/>
+                                <color key="backgroundColor" white="1" alpha="0.74545995450000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Air date:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCg-1Z-PZK">
+                                <rect key="frame" x="20" y="210.33333333333334" width="350" height="20"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GYz-1r-gKc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KYO-bu-3WJ" firstAttribute="top" secondItem="GYz-1r-gKc" secondAttribute="top" id="0o1-dp-jHE"/>
+                            <constraint firstItem="zFS-F9-YUU" firstAttribute="leading" secondItem="GYz-1r-gKc" secondAttribute="leading" constant="20" id="5J6-ks-dcf"/>
+                            <constraint firstItem="VCg-1Z-PZK" firstAttribute="leading" secondItem="GYz-1r-gKc" secondAttribute="leading" constant="20" id="5Ko-6B-R3D"/>
+                            <constraint firstItem="GYz-1r-gKc" firstAttribute="trailing" secondItem="aqA-KW-ppW" secondAttribute="trailing" constant="8" id="5tv-AR-dSP"/>
+                            <constraint firstItem="GYz-1r-gKc" firstAttribute="trailing" secondItem="VCg-1Z-PZK" secondAttribute="trailing" constant="20" id="9kM-eJ-3Jd"/>
+                            <constraint firstItem="KYO-bu-3WJ" firstAttribute="leading" secondItem="GYz-1r-gKc" secondAttribute="leading" id="EIY-sS-otm"/>
+                            <constraint firstItem="GYz-1r-gKc" firstAttribute="bottom" secondItem="vIC-MD-acP" secondAttribute="bottom" constant="50" id="F1v-cu-Wte"/>
+                            <constraint firstItem="GYz-1r-gKc" firstAttribute="trailing" secondItem="5Mx-2f-Wkd" secondAttribute="trailing" constant="20" id="Hmf-rQ-AL7"/>
+                            <constraint firstItem="VCg-1Z-PZK" firstAttribute="top" secondItem="aqA-KW-ppW" secondAttribute="bottom" constant="8" id="RRS-MX-iaq"/>
+                            <constraint firstItem="GYz-1r-gKc" firstAttribute="trailing" secondItem="zFS-F9-YUU" secondAttribute="trailing" constant="20" id="Uhb-U8-eUo"/>
+                            <constraint firstItem="zFS-F9-YUU" firstAttribute="top" secondItem="GYz-1r-gKc" secondAttribute="top" constant="10" id="YKw-6t-IaC"/>
+                            <constraint firstItem="5Mx-2f-Wkd" firstAttribute="leading" secondItem="GYz-1r-gKc" secondAttribute="leading" constant="20" id="aXL-WK-KDb"/>
+                            <constraint firstItem="vIC-MD-acP" firstAttribute="leading" secondItem="GYz-1r-gKc" secondAttribute="leading" constant="20" id="anO-68-Xyi"/>
+                            <constraint firstItem="GYz-1r-gKc" firstAttribute="bottom" secondItem="KYO-bu-3WJ" secondAttribute="bottom" id="mzX-3p-R9K"/>
+                            <constraint firstItem="aqA-KW-ppW" firstAttribute="leading" secondItem="GYz-1r-gKc" secondAttribute="leading" constant="8" id="p9D-Ni-6A3"/>
+                            <constraint firstItem="5Mx-2f-Wkd" firstAttribute="top" secondItem="zFS-F9-YUU" secondAttribute="bottom" constant="12" id="rMi-QR-Rjx"/>
+                            <constraint firstItem="GYz-1r-gKc" firstAttribute="trailing" secondItem="vIC-MD-acP" secondAttribute="trailing" constant="20" id="tKo-38-bv5"/>
+                            <constraint firstItem="GYz-1r-gKc" firstAttribute="trailing" secondItem="KYO-bu-3WJ" secondAttribute="trailing" id="tfZ-Pe-kvU"/>
+                            <constraint firstItem="aqA-KW-ppW" firstAttribute="top" secondItem="zFS-F9-YUU" secondAttribute="bottom" constant="70" id="wNK-57-L7Z"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Episode" image="film" catalog="system" id="gvM-U1-2GX"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="VCg-1Z-PZK" id="Phl-PX-IdX"/>
+                        <outlet property="descriptionTextView" destination="aqA-KW-ppW" id="CHq-ZL-qVq"/>
+                        <outlet property="getEpisodeButton" destination="vIC-MD-acP" id="N2Z-ag-U4b"/>
+                        <outlet property="titleLabel" destination="5Mx-2f-Wkd" id="OxV-Mw-Mpf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="693-BN-QsM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1066.1538461538462" y="790.52132701421795"/>
+        </scene>
+        <!--Quote-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OfficeQuotes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="QuoteViewController" customModule="OfficeQuotes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notepad" translatesAutoresizingMaskIntoConstraints="NO" id="bwi-yd-TmA">
-                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                                <rect key="frame" x="0.0" y="44" width="390" height="717"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="office quotes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGv-Zq-mry">
-                                <rect key="frame" x="20" y="56" width="350" height="38.333333333333343"/>
+                                <rect key="frame" x="20" y="54" width="350" height="38.333333333333343"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="33"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="&quot;And I knew exactly what to do. But in a much more real sense, I had no idea what to do.&quot;" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PL3-UM-Wn7">
-                                <rect key="frame" x="8" y="169.33333333333334" width="374" height="85.333333333333343"/>
+                                <rect key="frame" x="8" y="167.33333333333334" width="374" height="85.333333333333343"/>
                                 <color key="backgroundColor" white="1" alpha="0.74545995447019864" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6Y-Tp-muq">
-                                <rect key="frame" x="20" y="723" width="350" height="32"/>
+                                <rect key="frame" x="20" y="679" width="350" height="32"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <state key="normal" title="Get Random Quote"/>
                                 <connections>
@@ -41,13 +123,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-Michael Scott" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZU-cK-kAR">
-                                <rect key="frame" x="20" y="262.66666666666669" width="350" height="19.666666666666686"/>
+                                <rect key="frame" x="20" y="260.66666666666669" width="350" height="19.666666666666686"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bph-Nq-E4A">
-                                <rect key="frame" x="210" y="290.33333333333331" width="160" height="190"/>
+                                <rect key="frame" x="210" y="288.33333333333331" width="160" height="190"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Bph-Nq-E4A" secondAttribute="height" multiplier="16:19" id="E5F-Cd-uVA"/>
                                     <constraint firstAttribute="width" constant="160" id="WiY-6r-jO0"/>
@@ -61,11 +143,11 @@
                             <constraint firstItem="VZU-cK-kAR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2vp-oP-SSZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PL3-UM-Wn7" secondAttribute="trailing" constant="8" id="2wS-pk-Ehx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VZU-cK-kAR" secondAttribute="trailing" constant="20" id="5Zd-M1-M5X"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Q6Y-Tp-muq" secondAttribute="bottom" constant="55" id="8JJ-Uv-APf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Q6Y-Tp-muq" secondAttribute="bottom" constant="50" id="8JJ-Uv-APf"/>
                             <constraint firstItem="PL3-UM-Wn7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="9q2-PK-v6D"/>
                             <constraint firstItem="Q6Y-Tp-muq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="AKV-WV-sEV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q6Y-Tp-muq" secondAttribute="trailing" constant="20" id="I7n-RP-PgS"/>
-                            <constraint firstItem="RGv-Zq-mry" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="S19-7w-a30"/>
+                            <constraint firstItem="RGv-Zq-mry" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="S19-7w-a30"/>
                             <constraint firstItem="VZU-cK-kAR" firstAttribute="top" secondItem="PL3-UM-Wn7" secondAttribute="bottom" constant="8" id="SL9-ik-6Iq"/>
                             <constraint firstItem="Bph-Nq-E4A" firstAttribute="top" secondItem="VZU-cK-kAR" secondAttribute="bottom" constant="8" id="TLU-mI-Xeu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bwi-yd-TmA" secondAttribute="trailing" id="Yf0-SW-5qa"/>
@@ -78,6 +160,7 @@
                             <constraint firstItem="bwi-yd-TmA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rhS-6R-lSU"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Quote" image="quote.bubble" catalog="system" id="JUi-Qx-9gs"/>
                     <connections>
                         <outlet property="characterImageView" destination="Bph-Nq-E4A" id="CoB-NC-y0P"/>
                         <outlet property="characterLabel" destination="VZU-cK-kAR" id="uzH-yn-8eA"/>
@@ -87,11 +170,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.46153846153845" y="123.69668246445497"/>
+            <point key="canvasLocation" x="1067.6923076923076" y="123.69668246445497"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="2m0-uo-udD">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="if8-rq-ZYh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F0K-NI-4i0">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Sq3-Kh-4zY"/>
+                        <segue destination="TgK-ZT-NfH" kind="relationship" relationship="viewControllers" id="RDr-ig-8nZ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bO1-yh-hJL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.92307692307691" y="457.10900473933646"/>
         </scene>
     </scenes>
     <resources>
+        <image name="film" catalog="system" width="128" height="93"/>
         <image name="notepad" width="1370" height="1920"/>
+        <image name="quote.bubble" catalog="system" width="128" height="110"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
